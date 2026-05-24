@@ -1,3 +1,5 @@
+"use client";
+
 // Reusable chibi/cartoon SVG illustrations — flat style, consistent palette.
 import { motion } from "framer-motion";
 
