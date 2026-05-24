@@ -618,7 +618,7 @@ function ConclusionSection() {
           className="mt-16 px-10 py-5 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 text-white font-bold text-xl shadow-2xl"
           whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
         >
-          🎉 Cảm ơn thầy cô
+          🎉 Cảm ơn cô và các bạn
         </motion.button>
 
         <div className="mt-12 text-sm text-slate-500">— Hết —</div>
