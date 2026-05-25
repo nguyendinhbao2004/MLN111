@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function AIUsage(): JSX.Element {
+export default function AIUsage(): React.ReactElement {
   const [open, setOpen] = useState(false);
 
   return (
