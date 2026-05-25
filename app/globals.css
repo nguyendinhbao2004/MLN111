@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #bfa26f; /* luxury gold */
+  --muted: #f7f5f2;
 }
 
 @theme inline {
@@ -16,6 +18,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #bfa26f;
+    --muted: #111214;
   }
 }
 

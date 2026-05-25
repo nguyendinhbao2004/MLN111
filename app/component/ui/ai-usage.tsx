@@ -18,20 +18,24 @@ export default function AIUsage(): React.ReactElement {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex items-end justify-end">
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div
             className="absolute inset-0 bg-black/40"
             onClick={() => setOpen(false)}
             aria-hidden
           />
 
-          <div className="relative m-4 w-96 max-w-full bg-white text-black rounded-lg shadow-xl p-4 overflow-auto">
+          <div
+            className="relative mx-auto w-full max-w-2xl bg-[var(--background)] text-[var(--foreground)] rounded-xl shadow-2xl p-6 overflow-auto"
+            style={{ border: "1px solid rgba(0,0,0,0.06)" }}
+          >
             <div className="flex items-start justify-between gap-4">
               <h3 className="text-base font-semibold">PHỤ LỤC MINH BẠCH (AI USAGE REPORT)</h3>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close AI Usage"
-                className="text-gray-600 hover:text-gray-900"
+                className="text-[var(--foreground)] bg-[var(--muted)] hover:opacity-90 rounded-md px-2 py-1"
+                style={{ border: "none" }}
               >
                 ✕
               </button>
@@ -41,35 +45,33 @@ export default function AIUsage(): React.ReactElement {
               <p className="font-semibold">Báo Cáo Ứng Dụng AI</p>
               <p>
                 Tài liệu này minh bạch hóa quá trình nhóm sử dụng Trí Tuệ Nhân Tạo
-                trong việc phát triển Sản Phẩm Sáng Tạo "Hustle".
+                trong việc phát triển Sản Phẩm Sáng Tạo &quot;Hustle = Thành Công&quot;.
               </p>
 
               <p className="font-semibold">1. Công cụ sử dụng</p>
               <p>
-                Google Gemini Pro 1.5 / Antigravity: Hỗ trợ lập trình (Coding AI
+                Codex / Antigravity: Hỗ trợ lập trình (Coding AI
                 Assistant), phân tích cấu trúc, thiết kế giao diện UI/UX và gợi ý
                 tinh chỉnh nội dung hàn lâm.
               </p>
 
               <p className="font-semibold">2. Mục đích sử dụng</p>
               <p>
-                Phát triển giao diện web (HTML/CSS/React/Framer Motion) theo phong
-                cách Luxury Editorial. Tái cấu trúc (refactoring) nội dung từ dạng
-                câu chuyện HR thông thường sang bài phân tích chuyên sâu về Triết
-                học Mác - Lênin. Chuyển đổi trải nghiệm từ Slide ngang sang Game
-                Nhập Vai Tương Tác.
+                Phát triển giao diện web (HTML/CSS/React/Framer Motion) t. Tái cấu trúc (refactoring) nội dung từ dạng
+                câu chuyện sang bài phân tích chuyên sâu về Triết
+                học Mác - Lênin.
               </p>
 
               <p className="font-semibold">3. Prompt chính (Main Prompts)</p>
               <p>
-                "Tôi muốn đưa nội dung các cặp phạm trù vào project để thuyết
-                trình tình huống sinh viên T..."
+                &quot;Tôi muốn đưa nội dung các cặp phạm trù vào project để thuyết
+                trình tình huống sinh viên T...&quot;
               </p>
 
               <p>
-                "Làm sao để web này không giống slide thuyết trình mà giống một
+                &quot;Làm sao để web này không giống slide thuyết trình mà giống một
                 Sản phẩm sáng tạo / đóng vai bác sĩ tâm lý phân tích nhật ký của
-                sinh viên T"
+                sinh viên T&quot;
               </p>
 
               <p className="font-semibold">4. Kết quả và Phần chỉnh sửa của sinh viên</p>
@@ -85,8 +87,8 @@ export default function AIUsage(): React.ReactElement {
                 bộ lý luận AI sinh ra với Giáo trình Triết học Mác - Lênin
                 (2019/2021). Nhóm quyết định luồng câu chuyện, tùy chỉnh màu
                 sắc/font chữ, và duyệt sửa các từ ngữ chưa chính xác (ví dụ AI
-                từng viết sai "Nguyên cọ", nhóm đã phát hiện và yêu cầu sửa thành
-                "Nguyên cớ"). Sản phẩm phản ánh tư duy thiết kế và biên tập của
+                từng viết sai &quot;Nguyên cọ&quot;, nhóm đã phát hiện và yêu cầu sửa thành
+                &quot;Nguyên cớ&quot;). Sản phẩm phản ánh tư duy thiết kế và biên tập của
                 sinh viên.
               </p>
             </div>
