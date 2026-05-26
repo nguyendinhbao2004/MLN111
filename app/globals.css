@@ -10,8 +10,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-vietnam);
+  --font-mono: var(--font-heading);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,5 +26,103 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-vietnam), "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+body.scroll-locked {
+  overflow: hidden;
+  touch-action: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading), "Times New Roman", serif;
+  letter-spacing: 0.01em;
+}
+
+.story-scroll {
+  scroll-snap-type: y mandatory;
+}
+
+.story-section {
+  min-height: 100vh;
+  padding-block: clamp(3rem, 7vh, 6rem);
+  scroll-snap-align: start;
+}
+
+.story-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.story-icon-xs {
+  width: 18px;
+  height: 18px;
+}
+
+.story-icon-md {
+  width: 42px;
+  height: 42px;
+}
+
+.story-icon-lg {
+  width: 56px;
+  height: 56px;
+}
+
+.icon-light {
+  filter: invert(1) brightness(1.2);
+}
+
+.shake {
+  animation: screen-shake 0.45s linear infinite;
+}
+
+body.nodal-shake {
+  animation: screen-shake 0.6s linear infinite;
+}
+
+.nodal-zone.nodal-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(40, 40, 45, 0.7) 0%, rgba(120, 20, 20, 0.55) 100%);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glitch {
+  animation: glitch-flicker 1.3s infinite;
+  text-shadow: 2px 0 rgba(255, 0, 64, 0.5), -2px 0 rgba(0, 255, 255, 0.4);
+}
+
+.spiral-path {
+  width: min(86vw, 520px);
+  height: 620px;
+  opacity: 0.75;
+}
+
+@keyframes screen-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, 1px) rotate(-0.3deg); }
+  40% { transform: translate(1px, -1px) rotate(0.3deg); }
+  60% { transform: translate(-2px, 0) rotate(-0.2deg); }
+  80% { transform: translate(2px, 1px) rotate(0.2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; }
+  20% { opacity: 0.9; }
+  40% { opacity: 0.8; }
+  60% { opacity: 0.95; }
+  80% { opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shake,
+  body.nodal-shake,
+  .glitch {
+    animation: none;
+  }
 }
