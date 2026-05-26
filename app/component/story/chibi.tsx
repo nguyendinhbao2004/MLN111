@@ -64,16 +64,18 @@ export function ChibiStudent({ mood = "happy", size = 220 }: { mood?: Mood; size
   );
 }
 
-export function FloatingIcon({ children, x, y, delay = 0 }: { children: React.ReactNode; x: string; y: string; delay?: number }) {
+export function FloatingIcon({ src, alt, x, y, delay = 0, className = "" }: { src: string; alt: string; x: string; y: string; delay?: number; className?: string }) {
   return (
-    <motion.div
-      className="absolute text-3xl md:text-4xl select-none"
+    <motion.img
+      src={src}
+      alt={alt}
+      className={`absolute select-none story-icon ${className}`}
       style={{ left: x, top: y }}
       animate={{ y: [0, -15, 0], rotate: [-5, 5, -5] }}
       transition={{ duration: 4, repeat: Infinity, delay, ease: "easeInOut" }}
-    >
-      {children}
-    </motion.div>
+      loading="lazy"
+      decoding="async"
+    />
   );
 }
 
